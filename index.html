@@ -11,33 +11,149 @@
 
 <body>
   <header class="hero">
-    <div class="nav_logo">
+    <div class="nav-section">
       <div class="logo">
-        <img src="images/logo.svg" alt="logo">
+        <img src="images/logo.svg" alt="">
       </div>
-<div id="nav-container">
-  <button id="hamburger-menu"><img src="images/icon-hamburger.svg" alt="icon-hamburger"></button>
-<nav id="navBar">
-  <ul class="navItems">
-    <li class="item">About</li>
-    <li class="item">About</li>
-    <li class="item">About</li>
-    <li class="item white">About</li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-      <div class="hero-txt">
-        <h2>
-          we are creatives
-        </h2>
+      <nav class="navbar">
+        <ul>
+          <li class="item"><a href="">about</a></li>
+          <li class="item"><a href="">services</a></li>
+          <li class="item"><a href="">projects</a></li>
+          <li class="item"><a href="">contact</a></li>
+        </ul>
+      </nav>
+      </div>
+    <div class="hero-content">
+      <h1>we are creatives</h1>
       <div class="arrow">
+        <img src="images/icon-arrow-down.svg" alt="an arrow pointing down">
+      </div>
+    </div>
+    </header>
+    <main class="about">
+      <section class="services">
+        <div class="grid-item text">
+          <article>
+            <h2>Transform your brand</h2>
+            <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through
+              compelling visuals that do most of the marketing for you</p>
+            <span>learn more</span>
+          </article>
+        </div>
+        <div class="grid-item image">
+          <picture>
+            <source media="(min-width: 600px)" srcset="./images/desktop/image-transform.jpg">
+            <img src="./images/mobile/image-transform.jpg" alt="">
+          </picture>
+        </div>
+        <div class="grid-item image">
+          <picture>
+            <source media="(min-width: 600px)" srcset="./images/desktop/image-stand-out.jpg">
+            <img src="./images/mobile/image-stand-out.jpg" alt="">
+          </picture>
+        </div>
+        <div class="grid-item text">
+          <article>
+            <h2>Stand out to the right audience</h2>
+            <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters.
+              we'll build and extend your brand in digital places.</p>
+            <span>learn more</span>
 
-        <img src="images/icon-arrow-down.svg" alt="">
+        </article>
       </div>
+      <div class="grid-item last">
+        <article>
+          <h2>graphic design</h2>
+          <p>
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures your
+            potential client's attention.
+          </p>
+        </article>
       </div>
-  </header>
+      <div class="grid-item last">
+        <article>
+          <h2>photography</h2>
+          <p>
+            increase your credibility by getting the most stunning, high-quality photos that improve your business
+            image.
+          </p>
+        </article>
+
+      </div>
+      </section>
+      <section class="testimonials">
+        <h2>client testimonials</h2>
+        <div class="card-section">
+          <div class="card"><img src="images/image-emily.jpg" alt="">
+            <article>
+              <p></p>
+              <p></p>
+              <p></p>
+            </article>
+          </div>
+          <div class="card"><img src="images/image-thomas.jpg" alt="">
+            <article>
+              <p></p>
+              <p></p>
+              <p></p>
+            </article>
+          </div>
+          <div class="card"><img src="images/image-jennie.jpg" alt="">
+            <article>
+              <p></p>
+              <p></p>
+              <p></p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="images">
+          <picture>
+            <source media="(min-width: 600px)" srcset="images/desktop/image-gallery-milkbottles.jpg">
+            <img src="images/mobile/image-gallery-milkbottles.jpg" alt="">
+          </picture>
+        </div>
+        <div class="images">
+          <picture>
+            <source media="(min-width: 600px)" srcset="images/desktop/image-gallery-orange.jpg">
+            <img src="images/mobile/image-gallery-orange.jpg" alt="">
+          </picture>
+        </div>
+        <div class="images">
+          <picture>
+            <source media="(min-width: 600px)" srcset="images/desktop/image-gallery-cone.jpg">
+            <img src="images/mobile/image-gallery-cone.jpg" alt="">
+          </picture>
+        </div>
+        <div class="images">
+          <picture>
+            <source media="(min-width: 600px)" srcset="images/desktop/image-gallery-sugarcubes.jpg">
+            <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+          </picture>
+        </div>
+      </section>
+      </main>
+      <footer>
+        <div class="logo"><img src="images/logo.svg" alt=""></div>
+        <div class="footer-nav">
+          <ul>
+            <li class="item"><a href="">About</a></li>
+            <li class="item"><a href="">About</a></li>
+            <li class="item"><a href="">About</a></li>
+          </ul>
+        </div>
+    <div class="socials">
+      <ul>
+        <li><a href=""><img src="images/icon-facebook.svg" alt=""></a></li>
+        <li><a href=""><img src="images/icon-instagram.svg" alt=""></a></li>
+        <li><a href=""><img src="images/icon-twitter.svg" alt=""></a></li>
+        <li><a href=""><img src="images/icon-pinterest.svg" alt=""></a></li>
+      </ul>
+    </div>
+  </footer>
   <script type="module" src="main.js"></script>
 </body>
+
 </html>
