@@ -15,6 +15,7 @@
   --white: hsl(0, 0%, 100%);
 
 }
+
 *,
 *::before,
 *::after {
@@ -35,28 +36,56 @@ body {
   background-color: var(--white);
   color: var(--white);
   width: 100vw;
-    min-width: 350px;
+  min-width: 350px;
 }
 
 .hero {
   background: white url(images/desktop/image-header.jpg) no-repeat center center / cover;
-    height: 80vh;
+  height: 80vh;
 }
+
 .nav-section {
   display: flex;
   padding: 1em;
   justify-content: space-between;
 }
+
 .navbar {
   width: 50%;
 
   ul {
     display: flex;
+    width: 100%;
     list-style: none;
     justify-content: space-evenly;
     font-family: 'Barlow', sans-serif;
-
+    height: 100%;
   }
+}
+
+#hamburger {
+  display: none;
+}
+
+#hamburger-btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  width: 90%;
+  height: 30%;
+  -webkit-clip-path: polygon(93% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+  clip-path: polygon(93% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+  background: white;
+
+  color: black;
 }
 
 .item {
@@ -67,128 +96,211 @@ body {
   }
 }
 
+.mobile>ul {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin-top: 18px;
+}
+
 .hero-content {
   text-align: center;
   margin: auto;
   margin-top: 5rem;
-  
-    h1 {
-      text-transform: uppercase;
-      letter-spacing: 1.5rem;
-      font-size: clamp(2rem, 3rem, 5rem);
+
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    font-size: clamp(2rem, 3rem, 5rem);
+  }
+}
+
+.arrow {
+  height: 70%;
+  margin-top: 5rem;
+}
+
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-auto-rows: minmax(150px, 1fr);
+  background: var(--white);
+}
+
+.image>picture>img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text {
+  padding: clamp(1rem, 1.5rem, 2rem);
+
+  article {
+    text-align: left;
+    padding: 0 5rem;
+
+    h2 {
+      color: var(--dark-desaturated-blue);
+    }
+
+    p {
+      color: var(--dark-grayish-blue);
+      font-family: 'Barlow', sans-serif;
+    }
+
+    span {
+      color: var(--dark-desaturated-blue)
     }
   }
+
+}
+
+.grid-item {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.grid-item:nth-child(5) {
+  background: white url(images/desktop/image-graphic-design.jpg) no-repeat center center / cover;
+}
+
+.grid-item:nth-child(6) {
+  background: white url(images/desktop/image-photography.jpg) no-repeat center center / cover;
+}
+
+.testimonials {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  height: 300px;
+}
+
+.card>img {
+  border: 0px;
+  border-radius: 50%;
+  width: 75px;
+  margin: 0 auto;
+
+
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+
+}
+
+.images>picture>img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--footer);
+  color: var(--design-text);
+}
+.footer-logo {
+  margin: 0 auto;
+  padding-top: 60px;
+width: min-content;
+}
+.footer-nav {
+  margin: 0 auto;
+  width: 55%;
+  padding: 20px;
+}
+.footer-nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
   
-  .arrow {
-    height: 70%;
-    margin-top: 5rem;
+}
+.footer-nav > ul > li:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+.socials {
+  width: 30%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.socials > ul {
+display: flex;
+list-style: none;
+justify-content: space-evenly;
+}
+.link {
+  display: none;
+}
+.icon path {
+fill:  var(--design-text);
+cursor: pointer;
+}
+.icon:hover path {
+  
+fill: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background: white url(images/mobile/image-header.jpg) no-repeat center center / cover;
   }
-  
-  
-  main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+
+  #hamburger {
+    display: block;
   }
-  
+
+  #navbar {
+    display: none;
+  }
+
   .services {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-    grid-auto-rows: minmax(150px, 1fr);
-    background: var(--white);
+    grid-template-columns: 1fr;
   }
-  
-  .image>picture>img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
+
+  .grid-item:nth-child(1) {
+    grid-row: 2;
   }
-  
-  .text {
-    padding: clamp(1rem, 1.5rem, 2rem);
-  
-    article {
-      text-align: left;
-      padding: 0 5rem;
-  
-      h2 {
-        color: var(--dark-desaturated-blue);
-      }
-  
-      p {
-        color: var(--dark-grayish-blue);
-        font-family: 'Barlow', sans-serif;
-      }
-  
-      span {
-        color: var(--dark-desaturated-blue)
-      }
-    }
-  
-  }
-  
-  .grid-item {
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-  }
-  
-  .grid-item:nth-child(5) {
-    background: white url(images/desktop/image-graphic-design.jpg) no-repeat center center / cover;
-  }
-  
-  .grid-item:nth-child(6) {
-    background: white url(images/desktop/image-photography.jpg) no-repeat center center / cover;
-  }
-  
-  .testimonials {
-    background-color: black;
-    text-align: center;
-  }
-  
+
   .card-section {
-    display: flex;
-    justify-content: space-evenly;
-  
+    flex-direction: column;
   }
-  
-  .card>img {
-    border: 0px;
-    border-radius: 50%;
-  }
-  
+
   .gallery {
-    display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+
   }
-  
-  .images>picture>img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+
+  .images {
+    width: 50%;
+    flex-basis: 50%;
   }
-  
-  .last {}
-  
-  footer {
-    background-color: var(--footer);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .hero {
-      background: white url(images/mobile/image-header.jpg) no-repeat center center / cover;
-    }
-  
-    .services {
-      grid-template-columns: 1fr;
-    }
-  
-    .grid-item:nth-child(1) {
-      grid-row: 2;
-    }
 }
