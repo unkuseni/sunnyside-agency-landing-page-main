@@ -45,13 +45,11 @@ body {
   padding: 2rem;
 }
 
-.logo {
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+.logo>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .nav-section {
@@ -63,18 +61,18 @@ body {
 .navbar {
   width: 40%;
 
-  ul {
-    display: flex;
-    width: 100%;
-    list-style: none;
-    justify-content: space-evenly;
-    font-family: 'Barlow', sans-serif;
-    height: 100%;
+}
+.navbar>ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-evenly;
+  font-family: 'Barlow', sans-serif;
+  height: 100%;
 
-    li:nth-child(4) {
-      color: var(--dark-desaturated-blue);
-    }
-  }
+}
+.navbar>ul>li:nth-child(4) {
+  color: var(--dark-desaturated-blue);
 }
 
 #hamburger {
@@ -102,12 +100,12 @@ body {
   color: var(--dark-blue);
 }
 
-.item {
-  a {
+.item>a{
+  
     text-decoration: none;
     color: inherit;
     text-transform: capitalize;
-  }
+  
 }
 
 #navbar>ul>li:nth-child(4)>a {
@@ -132,12 +130,12 @@ body {
   margin: auto;
   margin-top: 5rem;
 
-  h1 {
-    text-transform: uppercase;
-    letter-spacing: 1.2rem;
-    font-size: clamp(3.5rem, 5vw, 6rem);
-    font-weight: 900;
-  }
+}
+.hero-content>h1 {
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-weight: 900;
 }
 
 .arrow {
@@ -146,11 +144,11 @@ body {
   position: relative;
   z-index: 1;
 
-  img {
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-  }
+}
+.arrow>img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 @keyframes bounce {
@@ -204,14 +202,14 @@ main {
 
 .text {
   padding: 4.5rem;
-
-  article {
+}
+ .text>article {
 
 
     text-align: left;
     padding: 0 3rem;
-
-    h2 {
+  }
+    .text>article>h2 {
       color: var(--dark-desaturated-blue);
       font-family: 'Fraunces', sans-serif;
       font-weight: 900;
@@ -219,7 +217,7 @@ main {
       padding-bottom: 1.5rem;
     }
 
-    p {
+    .text>article>p {
       color: var(--dark-grayish-blue);
       font-family: 'Barlow', sans-serif;
       font-size: clamp(0.94rem, 1.5vw, 3rem);
@@ -228,7 +226,7 @@ main {
       padding-bottom: 1.5rem;
     }
 
-    span {
+    .text>article>span {
       color: var(--dark-desaturated-blue);
       text-transform: uppercase;
       font-weight: 900;
@@ -236,7 +234,7 @@ main {
       position: relative;
     }
 
-    span::before {
+    .text>article>span::before {
       content: '';
       display: block;
       position: absolute;
@@ -248,13 +246,11 @@ main {
       left: -10%;
       top: 50%;
     }
-  }
+  
 
   #stand-out>span::before {
     background-color: var(--soft-red);
   }
-}
-
 
 
 
@@ -282,9 +278,9 @@ main {
 .photo-text {
   color: var(--photography-text);
 
-  p {
-    padding: 0 2rem;
-  }
+}
+.photo-text>p {
+  padding: 0 2rem;
 }
 
 .grid {
@@ -292,22 +288,22 @@ main {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 10vh;
-
-  h2 {
+}
+  .grid>h2 {
     padding-bottom: 2vh;
     font-size: clamp(1.5rem, 2vw, 6rem);
     text-transform: capitalize;
     font-weight: 900;
   }
 
-  p {
+  .grid>p {
     font-weight: 600;
     letter-spacing: 1.5;
     line-height: 1.5;
     font-family: 'Barlow', sans-serif;
     font-size: clamp(0.93rem, 1.1vw, 1.45rem);
   }
-}
+
 
 .heading {
   color: var(--grayish-blue);
@@ -352,13 +348,13 @@ main {
   font-weight: 600;
   color: var(--dark-blue);
   font-size: clamp(0.93rem, 1.1vw, 1.45rem);
-
-  p:nth-child(1) {
+}
+ .testimony>p:nth-child(1) {
     margin-bottom: 5vh;
     padding: 1rem;
   }
 
-  p:nth-child(2) {
+  .testimony>p:nth-child(2) {
     color: var(--dark-desaturated-blue);
     text-transform: capitalize;
     font-weight: 900;
@@ -366,12 +362,11 @@ main {
     font-size: clamp(1.5rem, 2vw, 2rem);
   }
 
-  p:nth-child(3) {
+  .testimony>p:nth-child(3) {
     margin-top: 2vh;
     text-transform: capitalize;
     color: var(--grayish-blue);
   }
-}
 
 .gallery {
   display: flex;
@@ -453,9 +448,9 @@ footer {
   font-family: 'Barlow', sans-serif;
   font-weight: 600;
   font-size: clamp(0.93rem, 1.1vw, 1.45rem);
-  a {
-    text-decoration: none;
-  }
+}
+#attribution>a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -506,31 +501,30 @@ footer {
   .grid {
     padding-bottom: 4vh;
       width: 80%;
-    
-      h2 {
+  }
+     .grid> h2 {
         padding-bottom: 4vh;
         font-size: clamp(3.5rem, 10vw, 6rem);
         text-transform: capitalize;
         font-weight: 900;
       }
   
-      p {
+      .grid>p {
         font-weight: 600;
         letter-spacing: 1.5;
         line-height: 1.5;
         font-family: 'Barlow', sans-serif;
         font-size: clamp(1.5rem, 2.1vw, 2rem);
       }
-    }
+    
 
   .card-section {
     flex-direction: column;
   }
-  .testimonials {
-    p:nth-child(1) {
+  .testimonials> p:nth-child(1) {
       font-size: clamp(1.5rem, 2.1vw, 2rem);
     }
-  }
+  
 
   .gallery {
     flex-wrap: wrap;
